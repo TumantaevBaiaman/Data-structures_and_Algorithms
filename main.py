@@ -1,11 +1,19 @@
 def master():
-    a = int(input())
-    s = 0
-    if a <= 1000:
-        for i in range(1, a + 1):
-            if a % i == 0:
-                s += i
-    print(s)
+    a, b = map(int, input().split())
+    for i in range(a, b+1):
+        f = 0
+        g = []
+        if a==b:
+            print("Absent")
+        else:
+            for j in range(a, b+1):
+                if f>=3:
+                    print("Absent")
+                    break
+                elif i%j==0:
+                    f += 1
+                    g.append(j)
+            print(g)
 
 
 if __name__ == '__main__':
